@@ -1,0 +1,524 @@
+body {
+	margin: 0; /*убрать отступы сверху, которые по умолчанию стоят */
+	font-family: 'Raleway', sans-serif; /*шрифт в body*/
+	font-size: 14px; /*средний размер шрифта в body */
+	color: #6c7279; /*цвет текста в body*/
+	background-color: white;
+	-webkit-font-smoothing: antialiased; /*сгладить шрифты, сделать их более стильными */
+}
+
+*,
+*:before,
+*:after { /*для всех наших элементов */
+	box-sizing: border-box; /*блок независимо от внутренних отступов не изменяется */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0 0 10px 0; /*сверху 0 справа 0 снизу 10 слева 0 */
+}
+
+/* Container */
+.container {
+	width: 100%;
+	max-width: 1200px; /*max width - 1170px no more */
+	margin: 0 auto; /*выравниваем по центру*/
+	padding: 0 15px;
+}
+
+
+/*Header...*/
+.header {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000; /*чтобы шапка была поверх всех элементов */
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between; /*между двумя элементами будет расстояние */
+	padding: 35px 0; /* отступ сверху и снизу */
+	border-bottom: 1px solid #515369; /*Черта сплошная под шапкой её размер и цвет */
+	align-items: center; /*выравнивает все элементы в данном блоке по центру */
+}
+
+/* Navigation ... */
+.nav {
+	display: flex;
+	font-size: 13px; /*общий размер для всей навигации */
+	font-weight: 700; /*Насыщенность шрифта от 100 до 900 100 - яркий 900- насыщенное сверхжирное */
+	text-transform: uppercase;
+
+}
+
+.nav__link {
+	color: white;
+	margin-left: 45px; /*отступ у каждой ссылки слева 45 пикселей */
+	text-decoration: none; /*убрать черту под ссылкой */
+	opacity: .75; /*Непрозрачность 0.75% */
+	transition: opacity .1s linear;
+}
+
+.nav__link:first-child { /*у первой ссылки убрать отступ */
+	margin-left: 0; 
+}
+
+.nav__link:hover { /*при наведении происходят какие-то действия */
+	opacity: 1;
+	/*text-decoration: underline; показывать подчеркивание */
+}
+
+/*Intro ...... */
+.intro {
+	display: flex;
+	flex-direction: column; /*каждый элемент в блоке интро будет начинаться с новой строки */
+	justify-content: center; /*чтобы выравнять данную ячейку по центру блока интро */
+	height: 750px;
+	padding-top: 100px; /*отступ от вверха 100 пикселей */
+	background: #31344e /*если плохой интернет, то вместо белого экрана будет этот цвет*/
+	url(img/intro-bg.jpg) center no-repeat;
+	background-size: cover;
+	 /*центр без повторений */ cover /*
+	чтобы картинка занимала всю высоту и ширину нашего блока */
+}
+
+.intro__inner {
+	width: 100%;
+	max-width: 970px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro__title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 65px;
+	color: white;
+	line-height: 1.1; /*межстрочный отступ 1- 65px (в этом случае!)*/
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0 0 30px 0; /*внешний отступ panding - внутренний */
+}
+
+.intro__subtitle {
+	font-size: 22px;
+	color: #fff;
+	margin-bottom: 60px;
+	line-height: 1.5; /* ТУТ единица равна 22 */
+	font-weight: 400;
+}
+
+
+/* Buttom ... */
+
+.btn {
+	display: inline-block; /*чтобы могли задавать размеры для кнопки отступы и т.д */
+	vertical-align: top; /*выравнивание по вертикальной границе */
+	font-size: 13px;
+	border-radius: 2px; /*закругление границ */
+	border: 0; /*граница */
+	font-family: 'Raleway', sans-serif; /*или inherit - наследования у родителя шрифт */
+	cursor: pointer; /*вместо дефолтного курсора будет ручка с пальцом */
+	padding: 14px 35px;
+	color: white;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+}
+
+.btn--red {
+	background-color: #e84545;
+	transition: background-color .1s linear;
+}
+
+.btn--long {
+	min-width: 280px;
+}
+
+
+.btn--red:hover {
+	background-color: #dd3434;
+}
+
+/* Features */
+.features {
+	display: flex;
+	flex-wrap: wrap; /*если элементы не помещаются на строке они переносятся на другую! */
+	margin: 100px 0;
+}
+
+
+
+.features__item {
+	width: 33.33333333%;
+	text-align: center;
+	padding: 0 40px;
+	margin: 30px 0;
+}
+
+.features__icon {
+	margin-bottom: 20px;
+}
+
+.features__title {
+	font-size: 14px;
+	color: #2d3033;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.features__text {
+	line-height: 1.5;
+	font-size: 14px;
+	color: #6c7279;
+}
+
+/* Works */
+.works {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.works__item {
+	width: 25%;
+	height: 350px;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	position: relative; /*из-за значения абсолют картинка относится к данному блоку */
+	overflow: hidden; /*Все что вылезает за пределы блока - скрывается */
+}
+
+.works__item:hover .works__content {
+	opacity: 1;
+}
+
+.works__photo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate3d(-50%, -50%, 0); /*используя left and top и 
+	это выравниваем картинку идеально по центру Х и У */
+}
+
+.works__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /*выравнивает элементы по центру в блоке */
+	text-align: center; /*выравнивает элементы по центру по горизонтаали */
+	width: 100%;
+	height: 100%;
+	background-color: rgba(232, 69, 69, .9); /*последний параметр это непрозрачносость*/
+	position: absolute;
+	top: 0;
+	opacity: 0; /*скрыть блок по умолчанию т.к. он будет вылезать при наводе мыши */
+	left: 0;
+	z-index: 2;
+	transition: opacity .2s linear;
+}
+
+.works__title {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	color: #fff;
+
+}
+
+
+.works__text {
+	font-size: 14px;
+	color: #fff;
+}
+
+
+/*team */
+.team {
+	margin: 100px 0 70px;
+}
+
+.team__inner {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px; /*прописали -15 поскольку заданы отступы слева
+	и справа у картинок по 15 пикселей из-за этого чтобы выравнить картинку
+	на позицию ноль в самое начало нужно прописать отрицательные координаты */
+}
+
+.team__item {
+	width: 25%;
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+
+.team__photo {
+	display: block;
+	max-width: 100%;
+	height: auto;   /*адаптация картинки под другие устройства */
+	margin-bottom: 30px;
+}
+
+
+.team__name {
+	font-size: 22px;
+	margin-bottom: 8px;
+	color: #2d3033;
+}
+
+.team__prof {
+	margin-bottom: 15px;
+	color: #e84545;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+.team__text {
+	font-size: 14px;
+	line-height: 1.5;
+	color: #6c7279;
+	margin-bottom: 18px;
+}
+
+
+/* SOCIAL 
++++++++++++++++++++++++++++*/
+.social {
+	display: flex;
+}
+
+.social--footer {
+	justify-content: center;
+
+}
+
+.social--footer .social__item {
+	background-color: transparent; /*прозрачный бэкграунд*/
+	border-width: 2px;
+	border-color: #fff;
+	border-radius: 2px; /*закруглить границу border */
+	transition: background-color .1s linear;
+
+}
+
+.social--footer .social__item:hover {
+	background-color: #fff;
+}
+
+.social__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin-right: 4px;
+	border: 1px solid #e8ecee;
+	background-color: #fff;
+	transition: background .1s linear;
+	}
+
+.social__item:hover {
+	background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+	fill: black;
+}
+
+
+.social__icon {
+	display: block;
+	height: 18px;
+	fill: #c6cacc;
+	transition: fill .1s linear;
+}
+
+
+.social--footer .social__icon {
+	fill: #fff;
+}
+
+
+/* reviews 
++++++++++++++++++++++++++++*?
+*/
+
+.reviews {
+	background-color: #53354a;
+	overflow: hidden;
+}
+.reviews__item {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.reviews__photo {
+	width: 50%;
+	height: 500px;
+	position: relative;
+}
+
+.reviews__img {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%); /*идеально по середине относительно У*/
+}
+
+.reviews__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	padding-left: 80px;
+}
+
+.reviews__text {
+	font-family: 'Cardo', sans-serif;
+	font-style: italic;
+	font-size: 36px;
+	line-height: 1.1;
+	color: #fff;
+	margin-bottom: 25px;
+}
+
+.reviews__author {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/*Download 
+**********************/
+
+.download {
+	margin: 90px 0;
+	text-align: center;
+}
+
+
+.download__title {
+	font-size: 28px;
+	color: #2d3033;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.download__text {
+	font-size: 13px;
+	color: #2d3033;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+/* Footer
+=============================== */
+
+
+.footer {
+	background-color: #3a3e64;
+}
+
+
+.footer__inner {
+	display: flex;
+	padding: 70px 0;
+	flex-wrap: wrap;
+}
+
+.footer__block {
+	width: 33.333333%;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.footer__title {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.footer__address {
+	color: rgba(255,255,255,.5);
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.footer__text {
+	color: rgba(255,255,255,.5);
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* copyright 
+*****++++++++++==================
+*/
+
+
+
+
+.copyright {
+	padding: 20px 0;
+	background-color: #313454;
+}
+
+.copyright__text {
+	text-align: center;
+	font-size: 14px;
+	color: #808080;
+	padding-bottom: 20px;
+	line-height: 1.5;
+}
+
+.copyright__text span {
+	color: #fff;
+}
+
+/* Burger
+*/
+.burger {
+	display: none;
+}
+
+
+
+
+/* Media 
+============*/
+
+
+@media (max-width: 991px) { /*Это медиа запрос который будет
+	срабатывать когда ширина экрана будет равна 1200px и меньше */
+
+	/* Nav */
+	.nav {
+		display: none;
+	}
+	/*burger*/
+	.burger {
+		display: block;
+	}
+	/*Intro */
+	.intro__title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+	.intro__title {
+		height: auto;
+		padding-bottom: 30px;
+		padding-top: 100px;
+	}
+}
