@@ -41,6 +41,17 @@ p {
 	z-index: 1000; /*чтобы шапка была поверх всех элементов */
 }
 
+.header.fixed {
+	position: fixed;
+	background-color: #31344e;
+	height: auto;
+}
+
+.header.fixed .header__inner {
+	padding: 15px 0;
+	border-bottom: 0;
+}
+
 .header__inner {
 	display: flex;
 	justify-content: space-between; /*между двумя элементами будет расстояние */
@@ -48,6 +59,9 @@ p {
 	border-bottom: 1px solid #515369; /*Черта сплошная под шапкой её размер и цвет */
 	align-items: center; /*выравнивает все элементы в данном блоке по центру */
 }
+
+
+
 
 /* Navigation ... */
 .nav {
@@ -113,6 +127,8 @@ p {
 	line-height: 1.5; /* ТУТ единица равна 22 */
 	font-weight: 400;
 }
+
+
 
 
 /* Buttom ... */
@@ -356,9 +372,17 @@ p {
 	background-color: #53354a;
 	overflow: hidden;
 }
+
+.reviews__slider {
+height: 500px;
+overflow: hidden;
+}
+
+
 .reviews__item {
 	display: flex;
 	flex-wrap: wrap;
+	overflow: hidden;
 }
 
 .reviews__photo {
@@ -373,6 +397,8 @@ p {
 	top: 50%;
 	transform: translateY(-50%); /*идеально по середине относительно У*/
 }
+
+
 
 .reviews__content {
 	display: flex;
@@ -394,6 +420,43 @@ p {
 .reviews__author {
 	color: #fff;
 	text-transform: uppercase;
+}
+
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0 0 10px;
+	list-style: none;
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+
+
+.slick-dots li {
+	margin: 0 5px;
+
+}
+
+.slick-dots button {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	border: 0;
+	padding: 0;
+	font-size: 0;
+	color: transparent;
+	opacity: .5;
+}
+
+
+.slick-dots .slick-active button {
+	opacity: 1;
 }
 
 /*Download 
@@ -545,8 +608,26 @@ p {
 
 	/* Nav */
 	.nav {
-		display: none;
+		display: none; 
+		position: absolute;
+		top: 100%;
+		right: 0;
+		flex-direction: column;
+		width: 100%;
+		text-align: right;
+		background-color: #31344e;
 	}
+
+	.nav.show {
+		display: flex;
+	}
+
+
+	.nav__link {
+		padding: 9px 15px;
+	}
+
+
 	/*burger*/
 	.burger {
 		display: block;
@@ -582,6 +663,7 @@ p {
 		margin-bottom: 40px;
 		overflow: hidden;
 	}
+
 
 
 	.reviews__content {
@@ -670,5 +752,13 @@ p {
 
 	.footer__inner {
 		padding: 30px 0;
+	}
+}
+
+@media (max-width: 414px) {
+	/*Reviews*/
+
+	.reviews__img {
+		right: -100px;
 	}
 }
