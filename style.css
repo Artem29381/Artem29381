@@ -378,6 +378,10 @@ height: 500px;
 overflow: hidden;
 }
 
+.reviews__slider.slick-initialized {
+	height: auto;
+}
+
 
 .reviews__item {
 	display: flex;
