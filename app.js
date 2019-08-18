@@ -57,11 +57,18 @@ slider.slick({
   fade: true, //затемнение отзывов
   arrows: false,
   dots: true,
+  cssEase: 'linear',
   autoplay: true,
-  autoplaySpeed: 2000
+  autoplaySpeed: 3000,
+  pauseOnHover: false,
+  pauseOnFocus: true
+  
 });
 
+let testimonials = $(".a")
+testimonials.on("click", function() {
 
+})
 
 });
 
