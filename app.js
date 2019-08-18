@@ -61,7 +61,7 @@ slider.slick({
   autoplay: true,
   autoplaySpeed: 3000,
   pauseOnHover: false,
-  pauseOnFocus: true
+  pauseOnFocus: false
   
 });
 
