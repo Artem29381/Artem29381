@@ -470,7 +470,230 @@ position: absolute;
 }
 
 
+.project__text {
+  margin-top: 80px;
+}
 
+
+.project__text__inner {
+  display: inline-grid;
+  grid-template-rows: 40% 60%;
+  max-width: 790px;
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.project__title {
+  font-size: 30px;
+  color: #555555;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.project__subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #9b9b9b;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project__button {
+  height: 45px;
+  margin-top: 50px;
+  margin-bottom: 25px;;
+}
+
+.button__inner {
+  display: flex;
+  margin-left: 30%;
+  max-width: 520px;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button__on {
+    background-color: #fff;
+      display: inline-block; /*чтобы могли задавать размеры для кнопки отступы и т.д */
+    vertical-align: top; /*выравнивание по вертикальной границе */
+    font-size: 13px;
+    border-radius: 2px; /*закругление границ */
+    border: 0; /*граница */
+    font-family: 'Raleway', sans-serif; /*или inherit - наследования у родителя шрифт */
+    cursor: pointer; /*вместо дефолтного курсора будет ручка с пальцом */
+    color: #9b9b9b;
+    width: 90px;
+    border-radius: 3px;
+    border: 1px solid #9b9b9b;
+    height: 30px;
+    line-height: 2.5;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s linear, color .2s linear, border .2s linear;
+}
+
+.button__on:nth-child(1) {
+  width: 70px;
+}
+
+.button__on:hover {
+  background-color: #998675;
+  color: #fff;
+  border: none;
+}
+
+
+.quam__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.quam__inner {
+  width: 377px;
+  height: 333px;
+  display: grid;
+  grid-template-rows: 60% 40%;
+  margin-bottom: 20px;
+}
+
+.quam__img__bg {
+  background-color: transparent;
+  position: absolute;
+  height: 100%;
+  opacity: .8;
+  top: 15px;
+  width: 100%;
+  transition: background-color .2s linear;
+}
+
+.quam__inner:hover .quam__img__bg {
+  background-color: #362f2d;
+  width: 98.6%;
+}
+
+.quam__inner:nth-child(1):hover .quam__img__bg {
+  background-color: #362f2d;
+}
+
+.quam__inner:hover .quam__search {
+  display: block;
+  fill: #fff;
+  z-index: 3;
+  transition: fill .2s linear;
+}
+
+.quam__inner:hover .quam__chain {
+  transition: fill .2s linear;
+  fill: #fff;
+  z-index: 3;
+}
+
+.quam__inner .quam__search:hover {
+  fill: #c7b299;
+  transition: fill .2s linear;
+}
+
+
+.quam__inner .quam__chain:hover {
+  fill: #c7b299;
+  transition: fill .2s linear;
+}
+
+.quam__text {
+  background-color: #fbfaf8;
+  display: grid;
+  z-index: 3;
+  width: 98.6%;
+}
+
+
+.quam__logo {
+  position: relative;
+  height: 280px;
+}
+
+.quam__img {
+  position: absolute;
+  top: 14px;
+}
+
+.quam__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #d1c0ac;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 32px;
+  margin-left: 30px;
+}
+
+
+.quam__subtitle {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #d4d4d4;
+  margin-left: 30px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.quam__inner:hover .quam__title {
+  color: #fff;
+  transition: color .2s linear;
+
+}
+
+.quam__inner:hover .quam__text {
+  background-color: #362f2d;
+  transition: background-color .2s linear;
+}
+
+.quam__inner:hover .triangle {
+  border-bottom: 30px solid #362f2d;
+  transition: border-bottom .2s linear;
+
+}
+.quam__inner:hover .quam__subtitle {
+  color: #c7b299;
+}
+
+
+.quam__chain {
+  width: 35px;
+  fill: transparent;
+  max-height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  transform: translate(-37%, -50%);
+}
+
+
+.quam__search {
+  width: 35px;
+  fill: transparent;
+  max-height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.triangle {
+  width: 0;
+  top: 61%;
+  left: 5%;
+  z-index: 3;
+height: 0;
+border-left: 30px solid transparent;
+border-right: 30px solid transparent;
+border-bottom: 30px solid #fbfaf8;
+position: absolute;
+}
 
 /*MEDIA */
 
@@ -505,6 +728,10 @@ right: -35%;
 }
 
 @media (max-width: 1150px) {
+  .quam__content {
+  justify-content: center;
+
+}
 .infa {
   width: 80%;
 }
@@ -648,6 +875,14 @@ width: 70%;
 }
 
 @media (max-width: 650px) {
+  .button__inner {
+  justify-content: center;
+}
+
+.button__on {
+    margin-right: 5px;
+}
+
     .intro__suptitle {
   font-size: 22px;
 }
@@ -715,6 +950,23 @@ width: 60%;
   min-width: 100px;
 }
 
+
+.project__title {
+  font-size: 22px;
+  color: #555555;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.project__subtitle {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #9b9b9b;
+  font-family: 'Montserrat', sans-serif;
+}
+}
+
 @media (max-width: 450px){
 
   .intro{
@@ -752,6 +1004,17 @@ width: 60%;
   font-size: 8px;
   padding: 8px 0;
   min-width: 90px;
+}
+
+.button__on {
+    font-size: 8px;
+    width: 60px;
+    height: 20px;
+}
+
+
+.button__on:nth-child(1) {
+  width: 40px;
 }
 
 }
@@ -813,4 +1076,32 @@ width: 60%;
   padding: 6px 0;
   min-width: 80px;
 }
+
+
+.wordpress__title {
+  font-size: 10px;}
+
+.wordpress__subtitle {
+  font-size: 10px;
+  left: 15%;
+
+}
+
+
+.wordpress__text {
+  font-size: 8px;
+}
+
+
+.button__on {
+    font-size: 5px;
+    width: 40px;
+    height: 15px;
+}
+
+
+.button__on:nth-child(1) {
+  width: 25px;
+}
+
 }
