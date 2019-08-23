@@ -2,6 +2,12 @@ let burg = document.getElementById('navClick');
 let nav = document.querySelector('.nav');
 burg.onclick = function() {
 	nav.classList.toggle('show');
+	nav.style.borderRadius = 5 + 'px';
+		if (document.body.offsetWidth < 1000) {
+		nav.style.height = 200 + 'px';}
+		else {
+			nav.style.height = 50 + 'px';
+		}
 }
 
 
@@ -15,7 +21,11 @@ window.addEventListener('scroll', function() {
 		nav.style.backgroundColor = '#333';
 		nav.style.top = 0;
 		nav.style.borderRadius = 5 + 'px';
-		nav.style.height = 50 + 'px';
+		if (document.body.offsetWidth < 1000) {
+		nav.style.height = 200 + 'px';}
+		else {
+			nav.style.height = 50 + 'px';
+		}
 	}
 	else {
 		nav.style.position = '';
@@ -25,7 +35,6 @@ function scrollToWindow() {
 	let coordinates = this.getAttribute('coord');
 	let CorrectElement = document.getElementById(coordinates);
 	let Otstyp = CorrectElement.getBoundingClientRect().top;
-	console.log(Otstyp);
 	CorrectElement.scrollIntoView({behavior: "smooth"});
 /*	if (Otstyp > 1) {
 
