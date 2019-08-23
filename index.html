@@ -209,7 +209,7 @@
 		</symbol>
  			</svg>
 
-<!-- 	Шапка
+<!-- 	Шапка -->
 <header class="header">
 	<div class="container">
 		<div class="header__inner">
@@ -218,30 +218,33 @@
 				<div class="header__text">Waxom</div>
 			</div>
 			<nav class="nav">
-				<div class="nav__item">Home</div>
-				<div class="nav__item">About Us</div>
+				<div class="nav__item" coord="home">Home</div>
+				<div class="nav__item" coord = 'video' >About Us</div>
 				<div class="nav__item">Portfolio</div>
 				<div class="nav__item">Features</div>
 				<div class="nav__item">Blog</div>
 				<div class="nav__item">Pricing</div>
 				<div class="nav__item">Shortcodes</div>
-				<div class="nav__item">Contact</div>
-			<div class="nav__item"><svg class = 'search__icon'>
+				<div class="nav__item" coord="footer">Contact</div>
+			<svg class = 'search__icon'>
 				<use xlink:href = "#battery"> </use>
-			</svg></div>
-				<div class="nav__item"><svg class = 'search__icon--right'>
+			</svg>
+			<svg class = 'search__icon--right'>
 				<use xlink:href = "#search"> </use>
-			</svg></div>
+			</svg>
 			</nav>
+			<button type="button" class = "burger" 	id="navClick">
+					<span class="burger__item"> Burger_Menu</span>
+				</button>
 		</div>
 	</div>
-</header> -->
+</header> 
 
 
   <!-- Intro -->
 
 
-  <div class="intro">
+  <div class="intro" id="home">
   <div class="container">
     <div class="intro__slider">
       <div class="intro__slider__prev"></div>
@@ -459,7 +462,7 @@
 	</div>
 </div>
 <!--player -->
-<div class="player">
+<div class="player" id="video">
 	<div class="container">
 	<svg class = 'player__play'>
 	<use xlink:href = "#play"> </use> </svg>
@@ -617,7 +620,7 @@
 
 
 
-<footer class="footer">
+<footer class="footer" id="footer">
 	<div class="container">
 		<div class="footer__inner">
 			<div class="footer__item">
@@ -665,7 +668,7 @@
 			</div></div></div></footer>
 
 
-			
+
 
  				<!-- Copyright -->
 <div class="copyright">
@@ -680,5 +683,6 @@
 	</div>
 </div>
 </div>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
