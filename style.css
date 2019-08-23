@@ -1721,7 +1721,7 @@ width: 110px; }
 }
 
 .mobile__photo {
-  width: 55%;
+  width: 100%;
 }
 
 
@@ -1947,7 +1947,7 @@ width: 60%;
 }
 
 .mobile__photo {
-  width: 55%;
+  width: 100%;
 }
 
 .mobile__subtitle {
@@ -2078,7 +2078,7 @@ width: 60%;
 }
 
   .recent__img {
-    width: 320px;
+    width: 100%;
     margin-top: 33px; 
   }
 
@@ -2175,4 +2175,11 @@ width: 60%;
   width: 25px;
 }
 
+}
+
+@media (max-width: 321px) {
+  .recent__img {
+    width: 320px;
+    margin-top: 33px; 
+  }
 }
