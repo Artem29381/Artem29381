@@ -249,6 +249,85 @@ width: 100%;
   border-right: 2px solid #8e745e;
 }
 
+/*Infa */
+
+.infa {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.infa__item {
+  max-width: 285px;
+  justify-content: center;
+  margin-top: 85px;
+  position: relative;
+}
+
+
+
+.infa__icon {
+  margin-bottom: 33px;
+  height: 40px;
+  transition: fill .2s linear;
+}
+
+
+
+.infa__item:hover .infa__title {
+  color: #c7b299;
+}
+
+.infa__item:hover .infa__icon {
+  fill: #c7b299;
+}
+
+.infa__item:hover:after {
+  background-color: #c7b299;
+
+}
+
+
+
+.infa__title {
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  color: #555555;
+  transition: color .2s linear;
+  margin-bottom: 30px;
+}
+
+
+.infa__subtitle {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #8c8c8c;
+  line-height: 1.7;
+}
+
+
+
+.infa__item:after {
+  content: "";
+ display: block;
+ width: 70px;
+ margin-top: 30px;
+ position: absolute;
+ left: 120px;
+ height: 3px;
+ background-color: #f1eee9;
+ transition: background-color .2s linear;
+ margin-bottom: 100px;
+}
+
+
+/*MEDIA */
+
 
 @media (max-width: 1450px) {
 .intro__subtitle {
