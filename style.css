@@ -400,6 +400,77 @@ position: absolute;
 }
 
 
+.wordpress {
+  height: 160px;
+  width: 100%;
+  background-color: #241d1a;
+}
+
+.wordpress__info {
+  position: relative;
+  height: 160px;
+}
+
+
+.wordpress__title {
+  font-size: 28px;
+  color: #c7b299;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+}
+
+.wordpress__subtitle {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  left: 10%;
+  font-size: 28px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.wordpress__text {
+  color: #615855;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 65%;
+  transform: translateY(-65%);
+}
+
+.wordpress__button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #998675;
+    display: inline-block; /*чтобы могли задавать размеры для кнопки отступы и т.д */
+  vertical-align: top; /*выравнивание по вертикальной границе */
+  font-size: 13px;
+  border-radius: 2px; /*закругление границ */
+  border: 0; /*граница */
+  font-family: 'Raleway', sans-serif; /*или inherit - наследования у родителя шрифт */
+  cursor: pointer; /*вместо дефолтного курсора будет ручка с пальцом */
+  padding: 14px 0;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  min-width: 170px;
+}
+
+
+.wordpress__button:hover {
+  background: #957d68;
+  transition: background-color .2s linear;
+}
+
+
+
 
 /*MEDIA */
 
@@ -445,6 +516,30 @@ left: -25%;
 
 .windows__img__right {
 right: -25%;
+}
+
+.wordpress__inner {
+  width: 90%;
+}
+
+.wordpress__title {
+  font-size: 18px;
+}
+
+.wordpress__subtitle {
+  font-size: 18px;
+}
+
+
+.wordpress__text {
+  font-size: 14px;
+}
+
+.wordpress__button {
+  top: 50%;
+  font-size: 10px;
+  padding: 11px 0;
+  min-width: 130px;
 }
 }
 
@@ -510,6 +605,30 @@ width: 70%;
 right: -5%;
 width: 70%;
 }
+
+
+
+
+
+.wordpress__title {
+  font-size: 15px;
+}
+
+.wordpress__subtitle {
+  font-size: 15px;
+}
+
+
+.wordpress__text {
+  font-size: 12px;
+}
+
+.wordpress__button {
+  top: 50%;
+  font-size: 8px;
+  padding: 9px 0;
+  min-width: 100px;
+}
 }
 
 
@@ -572,6 +691,28 @@ width: 60%;
   font-size: 12px;
   width: 400px;
 }
+
+
+.wordpress__title {
+  font-size: 12px;
+}
+
+.wordpress__subtitle {
+  font-size: 12px;
+  left: 15%;
+
+}
+
+
+.wordpress__text {
+  font-size: 9px;
+}
+
+.wordpress__button {
+  top: 50%;
+  font-size: 8px;
+  padding: 9px 0;
+  min-width: 100px;
 }
 
 @media (max-width: 450px){
@@ -661,5 +802,15 @@ width: 60%;
 .windows__text {
   font-size: 8px;
   width: 250px;
+}
+
+
+
+
+.wordpress__button {
+  top: 50%;
+  font-size: 8px;
+  padding: 6px 0;
+  min-width: 80px;
 }
 }
