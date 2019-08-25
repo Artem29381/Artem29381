@@ -1,77 +1,85 @@
-$(function(){
-	/*Fixed Header */
-	let header = $("#header");
-	let intro = $("#intro");
-	let introHeight = intro.innerHeight();
-	let scrollPosition = $(window).scrollTop();
-	checkScroll(scrollPosition, introHeight);
-
-	$(window).on("scroll resize", function() {
-		//можно load resize добавить
-		scrollPosition = $(this).scrollTop();
-		checkScroll(scrollPosition, introHeight);
-	});
-
-function checkScroll(scrollPosition, introHeight) {
-		if (scrollPosition > introHeight) {
-			header.addClass('fixed')
-		}
+let burg = document.getElementById('navClick');
+let nav = document.querySelector('.header');
+let navigation = document.querySelector('.nav');
+burg.onclick = function() {
+	navigation.classList.toggle('show');
+	navigation.style.borderRadius = 5 + 'px';
+		if (document.body.offsetWidth < 1000) {
+		navigation.style.height = 200 + 'px';}
 		else {
-			header.removeClass('fixed')
-}}
+			navigation.style.height = 50 + 'px';
+		}
+}
 
 
-	/*Smooth scroll */
+let header = document.querySelector('.header');
+let intro = document.querySelector('.intro');
+/*let burger = document.querySelector('.burger')
+	let element = document.querySelector('div').parentNode;
+	let scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+);
+*/
+window.addEventListener('scroll', function() {
+/*		
+Определение какой элемент попал в фокус экрана 
+if (element.offsetTop + element.getBoundingClientRect().bottom < window.pageYOffset) {
+					element = element.nextElementSibling;	
+					if (window.getComputedStyle(element).backgroundColor != 'rgba(0, 0, 0, 0)') {
+							burger.style.background = '#333';
+					}
+					else {
+						burger.style.background = '#333';
+					}
+}
+else if (scrollHeight - element.offsetTop + element.offsetHeight  < scrollHeight-window.pageYOffset) {
+		console.log(window.getComputedStyle(element).backgroundColor);
+	element = element.previousElementSibling;
 
-	$("[data-scroll]").on("click", function(event) {
-		event.preventDefault(); /*Отменяет стандартное поведение ссылки */
-
-		let elementId = $(this).data('scroll');
-		let elementOffset = $(elementId).offset().top; //отступ данного элемента от вверха 
-		nav.removeClass('show');
-
-		$("html, body").animate({
-			scrollTop: elementOffset-60
-		}, 700);
-
-
-	});
-/*Burger menu click show */
-	let nav = $("#nav");
-	let navClick = $("#navClick");
-	navClick.on("click", function(event) {
-		event.preventDefault();
-		nav.toggleClass('show'); /*добавляет класс при клике, убираем при повторном клике*/
-
-	});
-
-
-	/*Reviews*/ 
-//https://kenwheeler.github.io/slick/
-
-let slider = $("#reviewsSlider");
-slider.slick({
-  infinite: true, //бесконечная прокрутка включена
-  slidesToShow: 1, //сколько скролим
-  slidesToScroll: 1, //сколько скроллим при клике
-  fade: true, //затемнение отзывов
-  arrows: false,
-  dots: true,
-  cssEase: 'linear',
-  autoplay: true,
-  autoplaySpeed: 3000,
-  pauseOnHover: false,
-  pauseOnFocus: false
-  
+	if (window.getComputedStyle(element).backgroundColor != 'rgba(0, 0, 0, 0)') {
+						burger.style.background = '#333';
+					}
+					else {
+						burger.style.background = '#333';
+					}
+}*/
+	
+	if (window.pageYOffset > intro.offsetHeight) {
+		nav.style.position = 'fixed';
+		nav.style.right = 0;
+		nav.style.backgroundColor = '#333';
+		nav.style.top = 0;
+		nav.style.borderRadius = 5 + 'px';
+		if (document.body.offsetWidth < 1000) {
+		nav.style.height = 80 + 'px';}
+		else {
+			nav.style.height = 100 + 'px';
+		}
+	}
+	else {
+		nav.style.position = '';
+	}
 });
+function scrollToWindow() {
+	let coordinates = this.getAttribute('coord');
+	let CorrectElement = document.getElementById(coordinates);
+	let Otstyp = CorrectElement.getBoundingClientRect().top;
+	CorrectElement.scrollIntoView({behavior: "smooth"});
+/*	if (Otstyp > 1) {
 
-let testimonials = $(".a")
-testimonials.on("click", function() {
-
-})
-
-});
+	window.scrollTo(0,window.pageYOffset + Otstyp);
+	else {window.scrollTo(0,window.pageYOffset + Otstyp);}*/
+}
 
 
 
-//console.log(intro.offsetHeight); intro.clientHeight
+
+let selector = document.querySelectorAll(".nav__item");
+for (let elem of selector) {
+elem.addEventListener('click', scrollToWindow);
+}
+
+
+

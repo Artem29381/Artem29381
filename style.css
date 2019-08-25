@@ -1,21 +1,21 @@
 body {
-	margin: 0; /*убрать отступы сверху, которые по умолчанию стоят */
-	font-family: 'Open Sans', sans-serif; /*шрифт в body*/
-	font-size: 14px; /*средний размер шрифта в body */
-	color: #6c7279; /*цвет текста в body*/
-	background-color: white;
-	-webkit-font-smoothing: antialiased; /*сгладить шрифты, сделать их более стильными */
+  margin: 0; /*убрать отступы сверху, которые по умолчанию стоят */
+  font-family: 'Open Sans', sans-serif; /*шрифт в body*/
+  font-size: 14px; /*средний размер шрифта в body */
+  color: #6c7279; /*цвет текста в body*/
+  background-color: white;
+  -webkit-font-smoothing: antialiased; /*сгладить шрифты, сделать их более стильными */
 }
 
 *,
 *:before,
 *:after { /*для всех наших элементов */
-	box-sizing: border-box; /*блок независимо от внутренних отступов не изменяется */
+  box-sizing: border-box; /*блок независимо от внутренних отступов не изменяется */
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0;
+  margin: 0;
 }
 
 
@@ -24,10 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .container {
-	width: 100%;
-	max-width: 1156px; /*max width - 1170px no more */
-	padding: 0  0;
-	margin: 0 auto; /*выравниваем по центру*/
+  width: 100%;
+  max-width: 1156px; /*max width - 1170px no more */
+  padding: 0  0;
+  margin: 0 auto; /*выравниваем по центру*/
 }
 
 
@@ -66,10 +66,10 @@ width: 100%;
 }
 
 .header__text {
-	font-size: 34px;
-	font-weight: 400;
-	color: #fff;
-	font-family: 'Raleway', sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
   position: absolute;
   left: 80px;
   top: 50%;
@@ -95,32 +95,32 @@ width: 100%;
 }
 
 .nav__item {
-	font-size: 14px;
-	font-weight: 400;
-	cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
   margin-right: 30px;
-	color: #fff;
-	transition: color .2s linear;
+  color: #fff;
+  transition: color .2s linear;
   margin-top: 15px;
 }
 
 .nav__item:hover {
-	color: #bfab94;
+  color: #bfab94;
 }
 
 .nav__item:hover .search__icon {
-	fill: #bfab94;
+  fill: #bfab94;
 }
 
 .nav__item:hover .search__icon--right {
-	fill: #bfab94;
+  fill: #bfab94;
 }
 
 
 .search__icon {
-	width: 25px;
-	fill: #fff;
-	max-height: 30px;
+  width: 25px;
+  fill: #fff;
+  max-height: 30px;
   margin-right: 20px;
 }
 
@@ -137,11 +137,11 @@ width: 100%;
 
 /* Intro */
 .intro {
-	height: 1005px;
-	background: #3e4142 /*если плохой интернет, то вместо белого экрана будет этот цвет*/
-	url(img/intro/photo.jpg) center no-repeat;
-	background-size: cover;
-	padding-top: 120px;
+  height: 1005px;
+  background: #3e4142 /*если плохой интернет, то вместо белого экрана будет этот цвет*/
+  url(img/intro/photo.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 120px;
   position: relative;
 }
 
@@ -149,36 +149,36 @@ width: 100%;
 
 
 .intro__inner {
-	display: grid;
-	grid-template-rows: 25% 25% 25% 25%;
-	width: 100%;
-	margin 0 auto;
-	justify-items: center;
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  width: 100%;
+  margin 0 auto;
+  justify-items: center;
 }
 
 .intro__suptitle {
-	font-size: 36px;
-	color: #fff;
-	font-family: 'Raleway', sans-serif;
-	margin-top: 15%;
+  font-size: 36px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 15%;
 }
 
 
 .intro__title {
-	font-size: 52px;
-	color: #fff;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	margin-top: 25px;
+  font-size: 52px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-top: 25px;
 }
 
 
 .intro__subtitle {
-	font-size: 16px;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	margin-top: 30px;
-	text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .intro__button {
@@ -186,24 +186,24 @@ width: 100%;
   max-width: 20%;
     margin-top: 60px;
     display: inline-block; /*чтобы могли задавать размеры для кнопки отступы и т.д */
-	vertical-align: top; /*выравнивание по вертикальной границе */
-	font-size: 13px;
-	border-radius: 2px; /*закругление границ */
-	border: 0; /*граница */
-	font-family: 'Raleway', sans-serif; /*или inherit - наследования у родителя шрифт */
-	cursor: pointer; /*вместо дефолтного курсора будет ручка с пальцом */
-	padding: 14px 0;
-	color: white;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-align: center;
-	text-decoration: none;
+  vertical-align: top; /*выравнивание по вертикальной границе */
+  font-size: 13px;
+  border-radius: 2px; /*закругление границ */
+  border: 0; /*граница */
+  font-family: 'Raleway', sans-serif; /*или inherit - наследования у родителя шрифт */
+  cursor: pointer; /*вместо дефолтного курсора будет ручка с пальцом */
+  padding: 14px 0;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
   min-width: 170px;
 }
 
 
 .intro__button:hover {
-	background: #957d68;
+  background: #957d68;
   transition: background-color .2s linear;
 }
 
@@ -1511,7 +1511,7 @@ right: -25%;
   display: block;
   position: fixed;
   border-radius: 5px;
-  background-color: #333;
+  background:none;
   width: 40px;
   height: 30px;
 }
@@ -1714,6 +1714,12 @@ width: 70%;
 
 @media (max-width: 750px) {
 
+  .header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px; }
+
   .footer__inner {
   display: grid;
   grid-template-columns: 100%;
@@ -1866,6 +1872,22 @@ width: 110px; }
 }
 
 @media (max-width: 650px) {
+
+  .header__img {
+  width: 50px;
+  height: auto;
+}
+
+.header__text {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
 
 .stat {
   height: 1225px ;
