@@ -1,7 +1,8 @@
-let burg = document.getElementById('navClick');
+let burg = document.querySelector('#navClick');
 let nav = document.querySelector('.header');
 let navigation = document.querySelector('.nav');
 burg.onclick = function() {
+	burg.classList.toggle('trans');
 	navigation.classList.toggle('show');
 	navigation.style.borderRadius = 5 + 'px';
 		if (document.body.offsetWidth < 1000) {
@@ -52,8 +53,8 @@ else if (scrollHeight - element.offsetTop + element.offsetHeight  < scrollHeight
 		nav.style.backgroundColor = '#333';
 		nav.style.top = 0;
 		nav.style.borderRadius = 5 + 'px';
-		if (document.body.offsetWidth < 1000) {
-		nav.style.height = 80 + 'px';}
+		if (document.body.offsetWidth < 600) {
+		nav.style.height = 70 + 'px';}
 		else {
 			nav.style.height = 100 + 'px';
 		}

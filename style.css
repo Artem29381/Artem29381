@@ -1330,6 +1330,8 @@ font-family: 'Raleway', sans-serif;
 
 /* Burger
 */
+
+
 .burger {
   display: none;
   border: 0;
@@ -1364,10 +1366,12 @@ font-family: 'Raleway', sans-serif;
 .burger__item:before {
   top: -8px;
   width: 30px;
+   transition: transform .2s linear;
 }
 
 .burger__item:after {
   bottom: -8px;
+   transition: transform .2s linear;
   width: 26px;
 }
 
@@ -1713,6 +1717,21 @@ width: 70%;
 
 
 @media (max-width: 750px) {
+
+  .burger.trans .burger__item {
+    background: none;
+  }
+
+
+.burger.trans .burger__item:before {
+  transform-origin: left top;
+  transform: rotate(45deg) translateX(-2px);
+}
+
+.burger.trans .burger__item:after {
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translateX(-3px);
+}
 
   .header__inner {
   display: flex;
