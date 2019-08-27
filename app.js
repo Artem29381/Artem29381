@@ -56,7 +56,7 @@ else if (scrollHeight - element.offsetTop + element.offsetHeight  < scrollHeight
 		if (document.body.offsetWidth < 600) {
 		nav.style.height = 70 + 'px';}
 		else {
-			nav.style.height = 100 + 'px';
+			nav.style.height = 80 + 'px';
 		}
 	}
 	else {
