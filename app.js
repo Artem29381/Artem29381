@@ -54,12 +54,16 @@ else if (scrollHeight - element.offsetTop + element.offsetHeight  < scrollHeight
 		nav.style.top = 0;
 		nav.style.borderRadius = 5 + 'px';
 		if (document.body.offsetWidth < 600) {
-		nav.style.height = 70 + 'px';}
-		else if (document.body.offsetWidth > 760) {
+
+		nav.style.height = 70 + 'px';
+	nav.style.opacity = .5;}
+		else if (document.body.offsetWidth > 767) {
 			nav.style.height = 100 + 'px';
+
 		}
 		else {
 			nav.style.height = 70 + 'px';
+			nav.style.opacity = .5;
 		}
 	}
 	else {
