@@ -1,0 +1,91 @@
+.lays {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.lays__one {
+  height: 100%;
+  position: relative;
+  color: #fff;
+  background-color: red;
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/lays/triangle.png");
+    width: 1.2rem;
+    height: 3rem;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    z-index: 10;
+    right: -1.1rem;
+    top: 50%;
+    margin-top: -3.8rem;
+  }
+}
+
+.lays__one__text__box {
+  position: relative;
+  margin: 3.6rem 0 0 2rem;
+  &:after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/lays/lays.png");
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    top: -1.3rem;
+    left: -.93rem;
+    width: 6rem;
+    height: 6.64rem;
+  }
+}
+
+.lays__one__text__box h2 {
+  font-family: GothamPro-Bold;
+  margin-left: 5.29rem;
+  font-size: 1.33rem;
+  line-height: 1.47rem;
+}
+
+.lays__one__text__box p {
+  margin-top: 1.82rem;
+  font-size: .448rem;
+  line-height: .6rem;
+  font-family: GothamPro-Regular;
+  width: 11.72rem;
+}
+
+.photos__one__text__wrap__button {
+  font-size: .58rem;
+  margin: 1.03rem 0 0 -.05rem;
+}
+
+
+
+//-------------------------------------------------------
+
+.lays__two {
+  position: relative;
+  padding-top: 102%;
+}
+
+.lays__two__wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.lays__two__wrapper__img {
+  background: url("../img/lays/ball.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.1);
+  right: .3rem;
+}

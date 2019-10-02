@@ -1,0 +1,73 @@
+.map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.map__one {
+  position: relative;
+  padding-top: 102%;
+  background: url("../img/map/ppl.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.map__one__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map__two {
+  position: relative;
+  padding-top: 102%;
+  background: url("../img/map/map.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.map__two__box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/map/reversetriangle.png");
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    left: -1.2rem;
+    top: 50%;
+    margin-top: -1rem;
+    width: 1.26rem;
+    z-index: 10;
+    height: 3rem;
+  }
+}
+
+
+
+
+.map__two__box h2 {
+  font-family: GothamPro-Bold;
+  font-size: 1.4rem;
+  letter-spacing: .0545rem;
+  text-align: center;
+  margin: 10.55rem auto 0;
+}
+
+.map__two__box .photos__one__text__wrap__button {
+  margin: .9rem auto 0;
+}
+
+@media (max-width:  1401px) {
+  .map__two__box h2 {
+    font-family: GothamPro-Bold;
+    margin: 10.65rem auto 0;
+    font-size: 1.4rem;
+    letter-spacing: .06rem;
+  }
+}
