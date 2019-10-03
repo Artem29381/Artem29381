@@ -228,3 +228,72 @@
     background-color: #c4070e;
   }
 }
+
+@media (max-width: 681px) {
+  .footer {
+    height: 42px;
+    & p {
+      margin-left: 29px;
+      font-size: 9px;
+      line-height: 42px;
+      letter-spacing: -.3px;
+    }
+    & p span {
+      display: none;
+    }
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .footer__links div.facebook {
+    width: 46px;
+    height: 42px;
+    background: url("../img/footer/image.jpeg") no-repeat 50% 50%;
+    background-size: 52%;
+    background-color: #326aa2;
+    margin-right: -1px;
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  .footer__links div.vk {
+    width: 46px;
+    height: 42px;
+    background: url("../img/footer/image0.jpeg") no-repeat 50% 50%;
+    background-size: 52%;
+    background-color: #3479a8;
+    margin-right: -1px;
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  .footer__links div.earth {
+    width: 46px;
+    height: 42px;
+    background: url("../img/footer/image2.jpeg") no-repeat 50% 50%;
+    background-size: 52%;
+    background-color: #edbf11;
+    margin-right: -1px;
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  .footer__links div.youtube {
+    width: 46px;
+    height: 42px;
+    background: url("../img/footer/image1.jpeg") no-repeat 50% 50%;
+    background-size: 52%;
+    background-color: #c4070e;
+    margin-right: -1px;
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  
+}

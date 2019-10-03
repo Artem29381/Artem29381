@@ -199,7 +199,9 @@ body.no-scroll {
   min-width: 320px;
   margin: 0 auto;
   display:grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 150.5px 1fr;
+  background-color: #ffda2d;
+  overflow: hidden;
 }
 
 
@@ -213,6 +215,13 @@ body.no-scroll {
   .main {
     grid-template-columns: 1fr;
     grid-template-rows: 80px 1fr; //80
+    overflow: visible;
+    background-color: transparent;
+  }
+
+  body {
+    background-color: #ffda2d;
+    transition: background-color .1s linear .2s;
   }
 
 /*  .main.active {

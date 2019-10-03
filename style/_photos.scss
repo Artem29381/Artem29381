@@ -1,6 +1,9 @@
 .photos {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  transform: translateX(-350px);
+  opacity: 0;
+  transition: opacity 1s ease,transform 1s ease;
 }
 
 .photos__one {
@@ -142,9 +145,13 @@
 
 //---------------------------------------------------------------------------
 
+.photos__two {
+  background-color: #fff;
+}
+
 .photos__two__decorator {
   position: relative;
-  padding-top: 101.7%;
+  padding-top: 100%;
 }
 
 .photos__two__decorator__container {
@@ -178,6 +185,8 @@
     margin-top: -1px;
     display: grid;
     grid-template-columns: 1fr;
+    transform: translateX(0px);
+    opacity: 1;
   }
 
   .photos__one {
@@ -225,6 +234,12 @@
   .photos__two__decorator__container {
     padding: 15px;
     grid-gap: 3px;
+  }
+
+  .photos__one__text__wrap .photos__one__text__wrap__button {
+    &:hover:before {
+      opacity: 0;
+    }
   }
 
 
