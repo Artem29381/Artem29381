@@ -10,7 +10,14 @@ let header = document.querySelector('.header');
 let animate = document.querySelectorAll('.intro__wrapper__imgbox__icon__wrap__bg');
 let text = document.querySelectorAll('.intro__icon__text');
 
-
+function closeMenu() {
+    burger.classList.toggle('active');
+    main.classList.toggle('active');
+    header__block__img.classList.toggle('active');
+    header__block__img.nextElementSibling.classList.toggle('active');
+    header__block__img.nextElementSibling.nextElementSibling.classList.toggle('active');
+    close.classList.toggle('active');
+}
 
 let heightHeader = header.offsetHeight / 1.1;
 let value = window.pageYOffset;
@@ -20,12 +27,7 @@ window.addEventListener('scroll', function() {
         main.setAttribute('event', 'down');
         value = window.pageYOffset;
         if (burger.className.includes('active')) {
-            burger.classList.toggle('active');
-            main.classList.toggle('active');
-            header__block__img.classList.toggle('active');
-            header__block__img.nextElementSibling.classList.toggle('active');
-            header__block__img.nextElementSibling.nextElementSibling.classList.toggle('active');
-            close.classList.toggle('active');
+            closeMenu();
         }}
     else if (window.pageYOffset < value)  {
         header.setAttribute('event', 'up')
@@ -35,12 +37,7 @@ window.addEventListener('scroll', function() {
 });
 
 close.onclick = () => {
-    burger.classList.toggle('active');
-    main.classList.toggle('active');
-    header__block__img.classList.toggle('active');
-    header__block__img.nextElementSibling.classList.toggle('active');
-    header__block__img.nextElementSibling.nextElementSibling.classList.toggle('active');
-    close.classList.toggle('active');
+    closeMenu();
 };
 
 
@@ -63,12 +60,7 @@ setTimeout(function() {
 
 
 burger.onclick = () => {
-    burger.classList.toggle('active');
-    main.classList.toggle('active');
-    header__block__img.classList.toggle('active');
-    header__block__img.nextElementSibling.classList.toggle('active');
-    header__block__img.nextElementSibling.nextElementSibling.classList.toggle('active');
-    close.classList.toggle('active');
+    closeMenu();
 }
 let posTop;
 window.addEventListener('beforeunload', () => {
@@ -77,7 +69,6 @@ window.addEventListener('beforeunload', () => {
 
 setTimeout(function(){
     window.scrollTo(0, 1);
-    console.log('123');
 }, 1);
 let flag = false;
 if (document.body.offsetWidth > 640) {
