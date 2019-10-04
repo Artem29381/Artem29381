@@ -25,10 +25,12 @@
   margin: 46px 0 0 45px;
 }
 
+/*
 .intro__wrapper__imgbox__icon__wrap__bg:first-child {
   transform: scale(0);
   transition: transform .5s linear 1s;
 }
+*/
 
 
 
@@ -80,7 +82,7 @@
   padding-top: 12px;
   font-size: 17.5px;
   line-height: 21px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .4s cubic-bezier(.25,.1,.38,1.45) 1s;
 }
 

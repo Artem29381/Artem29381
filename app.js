@@ -21,17 +21,17 @@ function closeMenu() {
 
 let heightHeader = header.offsetHeight / 1.1;
 let value = window.pageYOffset;
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     if ((window.pageYOffset > value + 50) && (window.pageYOffset > heightHeader)) {
         header.setAttribute('event', 'down')
         main.setAttribute('event', 'down');
         value = window.pageYOffset;
         if (burger.className.includes('active')) {
             closeMenu();
-        }}
-    else if (window.pageYOffset < value)  {
+        }
+    } else if (window.pageYOffset < value) {
         header.setAttribute('event', 'up')
-        main.setAttribute('event', 'down');
+        main.setAttribute('event', 'up');
         value = window.pageYOffset;
     }
 });
@@ -41,12 +41,11 @@ close.onclick = () => {
 };
 
 
-
-
-setTimeout(function() {
+/*
+setTimeout(function () {
     animate[0].style.transform = 'scale(1)';
     text[0].style.opacity = 1;
-    return setTimeout(function() {
+    return setTimeout(function () {
         animate[1].style.transform = 'scale(1)';
         text[1].style.opacity = 1;
         return setTimeout(function () {
@@ -55,8 +54,7 @@ setTimeout(function() {
         }, 500);
     }, 500);
 }, 500);
-
-
+*/
 
 
 burger.onclick = () => {
@@ -67,42 +65,42 @@ window.addEventListener('beforeunload', () => {
     window.scrollTo(0, 0);
 });
 
-setTimeout(function(){
+setTimeout(function () {
     window.scrollTo(0, 1);
 }, 1);
 let flag = false;
 if (document.body.offsetWidth > 640) {
     let drob;
-    window.addEventListener('scroll', function() {
-
-
-        if (!flag) {
-            posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-            posTop = posTop + window.innerHeight - intro.getBoundingClientRect().top * 2;
-            if (posTop > intro.getBoundingClientRect().top) {
-                document.querySelector('.intro').style.opacity   = 1;
-                document.querySelector('.intro').style.transform = 'translate3d(0, 0, 0)';
+    window.addEventListener('scroll', function () {
+            if (!flag) {
+                posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+                posTop = posTop + window.innerHeight - intro.getBoundingClientRect().top * 2;
+                if (posTop > intro.getBoundingClientRect().top) {
+                    document.querySelector('.intro').style.opacity = 1;
+                    document.querySelector('.intro').style.transform = 'translate3d(0, 0, 0)';
+                }
+                if (posTop > phase2.getBoundingClientRect().top) {
+                    document.querySelector('.photos').style.opacity = 1;
+                    document.querySelector('.photos').style.transform = 'translate3d(0, 0, 0)';
+                }
+                if (posTop / 2 > lays__one.getBoundingClientRect().top) {
+                    drob = document.querySelector('.lays');
+                    drob.lastElementChild.style.transform = 'translate3d(0, 0, 0)';
+                    drob.firstElementChild.style.transform = 'translate3d(0, 0, 0)';
+                    drob.firstElementChild.style.opacity = 1;
+                    drob.lastElementChild.style.opacity = 1;
+                }
+                if (posTop / 2 > map.getBoundingClientRect().bottom) {
+                    drob = document.querySelector('.map');
+                    drob.lastElementChild.style.transform = 'translate3d(0, 0, 0)';
+                    drob.firstElementChild.style.transform = 'translate3d(0, 0, 0)';
+                    drob.firstElementChild.style.opacity = 1;
+                    drob.lastElementChild.style.opacity = 1;
+                    flag = true;
+                }
             }
-           if (posTop > phase2.getBoundingClientRect().top) {
-                document.querySelector('.photos').style.opacity= 1;
-                document.querySelector('.photos').style.transform = 'translate3d(0, 0, 0)';
-            }
-            if (posTop / 2> lays__one.getBoundingClientRect().top) {
-                drob = document.querySelector('.lays');
-                drob.lastElementChild.style.transform = 'translate3d(0, 0, 0)';
-                drob.firstElementChild.style.transform = 'translate3d(0, 0, 0)';
-                drob.firstElementChild.style.opacity= 1;
-                drob.lastElementChild.style.opacity= 1;
-            }
-            if (posTop / 2 > map.getBoundingClientRect().bottom) {
-                drob = document.querySelector('.map');
-                drob.lastElementChild.style.transform = 'translate3d(0, 0, 0)';
-                drob.firstElementChild.style.transform = 'translate3d(0, 0, 0)';
-                drob.firstElementChild.style.opacity= 1;
-                drob.lastElementChild.style.opacity= 1;
-                flag = true;
-            }
-        }}
-    );}
-document.querySelector('.intro').style.opacity   = 1;
+        }
+    );
+}
+document.querySelector('.intro').style.opacity = 1;
 document.querySelector('body').style.backgroundColor = 'transparent';

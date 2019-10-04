@@ -427,9 +427,6 @@ body.no-scroll {
     border-bottom: none;
     opacity: 1;
   }
-  .header__wrapper__close:hover {
-    background-color: #fff;
-  }
 
   .header__wrapper__img {
     position: relative;
@@ -437,7 +434,7 @@ body.no-scroll {
     width: 100%;
   }
   .header__wrapper__img:hover {
-    background: white;
+    background: #f6f6f6;
   }
   .header__wrapper__img:before {
     content: "";
@@ -595,11 +592,12 @@ body.no-scroll {
   margin: 46px 0 0 45px;
 }
 
+/*
 .intro__wrapper__imgbox__icon__wrap__bg:first-child {
   transform: scale(0);
-  transition: transform 0.5s linear 1s;
+  transition: transform .5s linear 1s;
 }
-
+*/
 .intro__wrapper__imgbox__icon {
   float: left;
   position: relative;
@@ -646,7 +644,7 @@ body.no-scroll {
   padding-top: 12px;
   font-size: 17.5px;
   line-height: 21px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.38, 1.45) 1s;
 }
 

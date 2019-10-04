@@ -190,10 +190,6 @@
       border-bottom: none;
       opacity: 1;
     }
-
-    &:hover {
-      background-color: #fff;
-    }
   }
 
   .header__wrapper__img {
@@ -202,7 +198,7 @@
     width: 100%;
 
     &:hover {
-      background: white;
+      background: #f6f6f6;
     }
 
     &:before {
