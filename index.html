@@ -1,204 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
+    <title>Todo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale = 1 maximum-scale = 1 user-scalable = 1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 </head>
 <body>
-<section class="main">
-
-
-
+<section class="todo">
     <header class="header">
-        <div class="header__wrapper">
-            <div class="header__wrapper__mainlogo">
-                    <div class="header__wrapper__mainlogo__logo"></div>
-                    <p>#letolays</p>
-                    <div class="burger">
-                        <div class="burger__item1"></div>
-                        <div class="burger__item2"></div>
-                        <div class="burger__item3"></div>
-                    </div>
-            </div>
-            <div class="header__wrapper__img">
-                <img src="img/header/1.png" alt="" class="header__img">
-                <p>Галерея</p>
-            </div>
-            <div class="header__wrapper__img">
-                <img src="img/header/2.png" alt="" class="header__img">
-                <p>О проекте</p>
-            </div>
-            <div class="header__wrapper__img">
-                <img src="img/header/3.png" alt="" class="header__img">
-                <p>Лето с Lay's</p>
-            </div>
-            <div class="header__wrapper__close">
-                <p>Свернуть меню</p>
-            </div>
-        </div>
+        <h1>todos</h1>
+        <input type="text" class="todos__input" placeholder="What needs to be done?" autofocus>
+        <input class="toggle__all" type="checkbox">
+        <label for="toggle__all"></label>
     </header>
+    <section class="main">
+        <ul class="todo__list">
 
-    <!--Intro-->
-    <div class="content">
-        <div class="intro">
-            <div class="intro__wrapper">
-                <!--Icons-->
-                <div class="intro__wrapper__imgbox">
-                   <div class="intro__wrapper__imgbox__icon">
-                       <div class="intro__wrapper__imgbox__icon__wrap">
-                           <div class="intro__wrapper__imgbox__icon__wrap__bg">
-                               <img src="img/intro/photo.png" alt="" class="image">
-                           </div>
-                       </div>
-                       <p class="intro__icon__text">
-                           Загружай фото<br>с хештегом<br><span class="letolays">#letolays</span>
-                       </p>
-                   </div>
-                   <div class="intro__wrapper__imgbox__icon">
-                       <div class="intro__wrapper__imgbox__icon__wrap">
-                           <div class="intro__wrapper__imgbox__icon__wrap__bg">
-                               <img src="img/intro/heart.png" alt="" class="image">
-                           </div>
-                       </div>
-                       <p class="intro__icon__text">
-                           Собирай<br>лайки
-                       </p>
-                   </div>
-                   <div class="intro__wrapper__imgbox__icon">
-                       <div class="intro__wrapper__imgbox__icon__wrap">
-                           <div class="intro__wrapper__imgbox__icon__wrap__bg">
-                               <img src="img/intro/box.png" alt="" class="image">
-                           </div>
-                       </div>
-                       <p class="intro__icon__text">
-                           Выигрывай<br>призы
-                       </p>
-                   </div>
-               </div>
-                <!--Icons-->
-                <div class="h1__blocks">
-                    <div class="h1__blocks__text">
-                        ЛЕТО
-                    </div>
-                    <div class="h1__blocks__text middle">
-                        ВКУСНЕЕ
-                    </div>
-                    <div class="h1__blocks__text last">
-                        С
-                        <span>Lay's</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--/Intro-->
-
-
-
-
-<!--Photo-->
-        <div class="photos">
-            <div class="photos__one">
-                <div class="photos__one__text">
-                    <div class="photos__one__text__wrap">
-                        <h2>Загружай</h2>
-                        <h2>фото</h2>
-                        <h2>с хештегом</h2>
-                        <h2 class="photos__leto">#letolays</h2>
-                        <div class="photos__one__text__wrap__button">галерея</div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--two block -->
-            <div class="photos__two">
-                <div class="photos__two__decorator">
-                    <div class="photos__two__decorator__container">
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_1.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_2.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_3.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_4.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_5.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_6.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_7.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_8.png);">
-                        </div>
-                        <div class="photos__two__item__two__block__img"
-                             style="background-image: url(img/block2/right_9.png);">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--/photos-->
-
-<!--LAYS-->
-        <div class="lays">
-            <div class="lays__one">
-                <div class="lays__one__wrap__mobile">
-                <div class="lays__one__text__box">
-                    <h2>Выиграй<br>призы<br>от Lay's</h2>
-                    <h2 class="mobile">Выиграй призы<br>от Lay's</h2>
-                    <p>Этим летом бренд Lay’s задает тренд на яркое, вкусное лето и на позитивный желтый цвет.</p>
-                    <p class="mobile">Этим летом брэнд<br>Lay's задает тренд<br>на яркое, вкусное<br>лето и на позитивный<br>желтый цвет</p>
-                    <div class="photos__one__text__wrap__button">О проекте</div>
-                </div>
-                </div>
-            </div>
-            <div class="lays__two">
-                        <div class="lays__two__wrapper">
-                            <div class="lays__two__wrapper__img"></div>
-                        </div>
-            </div>
-        </div>
-
-        <!--/LAYS-->
-      <div class="map">
-          <div class="map__one">
-              <div class="map__one__wrapper">
-                  <div class="map__one__wrapper__img"></div>
-              </div>
-          </div>
-          <div class="map__two">
-                <div class="map__two__box">
-                        <h2>Лето с Lay's</h2>
-                        <div class="photos__one__text__wrap__button">Перейти</div>
-                </div>
-            </div>
-        </div>
-     <footer class="footer">
-         <div class="footer__logo"></div>
-         <p>© 2015 Lay's Russia<span>. Все права защищены</span></p>
-         <div class="footer__links">
-             <div class="facebook"></div>
-             <div class="vk"></div>
-             <div class="earth"></div>
-             <div class="youtube"></div>
-         </div>
-     </footer>
-    </div>
+        </ul>
+    </section>
+    <footer class="footer">
+		<span class="todo__count">
+			<strong>2</strong>
+			item left
+		</span>
+        <ul class="filters">
+            <li>
+                <a href="#/" class="selected" style="outline: none;">All</a>
+            </li>
+            <li>
+                <a href="#/active" class="selected" style="outline: none;">Active</a>
+            </li>
+            <li>
+                <a href="#/completed" class="selected" style="outline: none;">Completed</a>
+            </li>
+        </ul>
+        <button class="clear">
+            Clear completed
+        </button>
+    </footer>
 </section>
-<script src="app.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
