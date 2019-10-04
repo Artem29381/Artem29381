@@ -1,0 +1,164 @@
+.map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &:hover .map__one .map__one__wrapper .map__one__wrapper__img {
+    transition: transform 10s linear;
+    transform: scale(1.20);
+  }
+}
+
+.map__one {
+  position: relative;
+  height: 100%;
+  opacity: 0;
+  padding-top: 102%;
+  transition: opacity 1s ease,transform 1s ease;
+  transform: translateX(-350px);
+}
+
+.map__one__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  left: 0;
+}
+
+.map__one__wrapper__img {
+  background: url("../img/map/ppl.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 10s linear;
+}
+
+.map__one__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map__two {
+  position: relative;
+  padding-top: 102%;
+  background: url("../img/map/map.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  transform: translateX(350px);
+  opacity: 0;
+  transition: opacity 1s ease,transform 1s ease;
+}
+
+.map__two__box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/map/reversetriangle.png");
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    left: -1.2rem;
+    top: 50%;
+    margin-top: -1rem;
+    width: 1.26rem;
+    z-index: 10;
+    height: 3rem;
+  }
+}
+
+
+
+
+.map__two__box h2 {
+  font-family: GothamPro-Bold;
+  font-size: 1.4rem;
+  letter-spacing: .0545rem;
+  text-align: center;
+  margin: 10.55rem auto 0;
+}
+
+.map__two__box .photos__one__text__wrap__button {
+  margin: .9rem auto 0;
+}
+
+@media (max-width:  1401px) {
+  .map__two__box h2 {
+    font-family: GothamPro-Bold;
+    margin: 10.65rem auto 0;
+    font-size: 1.4rem;
+    letter-spacing: .06rem;
+  }
+}
+
+@media (max-width: 681px) {
+  .map {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    &:hover .map__one {
+      transition: none;
+      transform: scale(1);
+    }
+    &:hover .map__one .map__one__wrapper .map__one__wrapper__img {
+      transition: none;
+      transform: scale(1);
+    }
+  }
+
+  .map__two {
+    width: 100%;
+    background-size: 100% 100%;
+    border-top: 5px solid white;
+    background: url("../img/map/mobile__map.png") no-repeat 50% 50%;
+    background-size: cover;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .map__two__box h2 {
+    position: relative;
+    top: 62.2%;
+    left: 50%;
+    margin: -1% 0 0 -29%;
+    width: 60%;
+    font-size: 3.7rem;
+  }
+
+  .map__two__box .photos__one__text__wrap__button {
+    position: relative;
+    top: 65%;
+    left: 50%;
+    margin: .71rem auto 0;
+    margin-left: -6.5rem;
+    width: 14rem;
+    height: 3.9rem;
+    font-size: 1.4rem;
+    letter-spacing: .4px;
+    line-height: 3.9rem;
+    background-color: rgba(168,5,0,.1);
+    &:hover:before {
+      opacity: 0;
+    }
+
+  }
+
+  .map__one {
+    width: 100%;
+    transform: scale(1.004);
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+
+
+  
+}

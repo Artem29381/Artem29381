@@ -1,0 +1,227 @@
+.lays {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &:hover .lays__two .lays__two__wrapper__img{
+    transition: transform 10s ease;
+    transform: scale(1.25);
+  }
+}
+
+
+.lays__one__wrap__mobile {
+  display: block;
+}
+
+.lays__one__text__box {
+  & p.mobile {
+    display: none;
+  }
+  & h2.mobile {
+    display: none;
+  }
+}
+
+.lays__one {
+  height: 100%;
+  position: relative;
+  color: #fff;
+  z-index: 10;
+  background-color: red;
+  transform: translateX(-350px);
+  opacity: 0;
+  transition: opacity 1s ease,transform 1s ease;
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/lays/triangle.png");
+    width: 1.2rem;
+    height: 3rem;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    z-index: 10;
+    right: -1.1rem;
+    top: 50%;
+    margin-top: -3.8rem;
+  }
+
+}
+
+.lays__one__text__box {
+  position: relative;
+  margin: 3.6rem 0 0 2rem;
+  &:after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/lays/lays.png");
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    top: -1.3rem;
+    left: -.93rem;
+    width: 6rem;
+    height: 6.64rem;
+  }
+}
+
+.lays__one__text__box h2 {
+  font-family: GothamPro-Bold;
+  margin-left: 5.29rem;
+  font-size: 1.33rem;
+  line-height: 1.47rem;
+}
+
+.lays__one__text__box p {
+  margin-top: 1.82rem;
+  font-size: .448rem;
+  line-height: .6rem;
+  font-family: GothamPro-Regular;
+  width: 11.72rem;
+}
+
+.photos__one__text__wrap__button {
+  font-size: .58rem;
+  margin: 1.03rem 0 0 -.05rem;
+}
+
+
+
+//-------------------------------------------------------
+
+.lays__two {
+  position: relative;
+  padding-top: 102%;
+  transform: translateX(350px);
+  opacity: 0;
+  transition: opacity 1s ease,transform 1s ease;
+
+}
+
+.lays__two__wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.lays__two__wrapper__img {
+  background: url("../img/lays/ball.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.1);
+  right: .3rem;
+  transition: transform 10s ease;
+}
+
+@media (max-width: 680px) {
+  .lays {
+    grid-template-columns: 1fr;
+    &:hover .lays__two .lays__two__wrapper__img{
+      transition: none;
+      transform: scale(1);
+    }
+  }
+
+  .lays__one__wrap__mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+
+  .lays__one {
+    height: 100%;
+    transform: translateX(0px);
+    position: relative;
+    padding-top: 100%; /* 16:9 Aspect Ratio */
+    background: url("../img/lays/mobile__red.png") no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 1;
+    &:after {
+      display: none;
+    }
+  }
+
+  .lays__one__text__box {
+    position: static;
+    margin: 0;
+    padding-top: 5.2rem;
+    &:after {
+     display: none;
+    }
+  }
+
+  .lays__one__text__box h2 {
+    display: none;
+  }
+
+  .lays__one__text__box p {
+    display: none;
+  }
+
+  .lays__one__text__box h2.mobile {
+    display: block;
+    margin-left: 4rem;
+    font-size: 3.55rem;
+    line-height: 3.75rem;
+  }
+
+  .lays__one__text__box p.mobile {
+    display: block;
+    margin-top: 3.32rem;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    width: 20rem;
+    margin-left: 4rem;
+  }
+
+
+  .lays__one__text__box .photos__one__text__wrap__button {
+    position: absolute;
+    left: 50%;
+    bottom: 6rem;
+    margin-top: 0;
+    margin-left: -7rem;
+    width: 14rem;
+    font-size: 1.4rem;
+    letter-spacing: .4px;
+    line-height: 3.9rem;
+    height: 3.9rem;
+    background-color: rgba(255,245,159,.1);
+    &:hover:before {
+      opacity: 0;
+    }
+  }
+
+  //-------------------------------------------
+
+  .lays__two__wrapper {
+    overflow: hidden;
+  }
+
+  .lays__two {
+    padding-top: 97.5%;
+    opacity: 1;
+    transform: translateX(0px);
+
+  }
+  .lays__two__wrapper__img {
+    background: url("../img/lays/newmobile.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    right: 0rem;
+    top: 0rem;
+  }
+
+
+}
