@@ -947,7 +947,7 @@ body.no-scroll {
   padding-top: 100%;
 }
 
-.photos__two-docorator-container {
+.photos__two-decorator__container {
   position: absolute;
   left: 0;
   top: 0;
@@ -967,7 +967,7 @@ body.no-scroll {
 }
 
 @media (max-width: 1401px) {
-  .photos__two-docorator-container {
+  .photos__two-decorator__container {
     padding: 0.7rem;
   }
 }
@@ -1023,7 +1023,7 @@ body.no-scroll {
     background-size: contain;
   }
 
-  .photos__two-docorator-container {
+  .photos__two-decorator__container {
     padding: 15px;
     grid-gap: 3px;
   }
@@ -1057,7 +1057,7 @@ body.no-scroll {
   position: relative;
   color: #fff;
   z-index: 10;
-  background-color: red;
+  background-color: #ec0d00;
   transform: translateX(-350px);
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
