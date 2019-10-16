@@ -1100,7 +1100,6 @@ body.no-scroll {
 }
 
 .lays__one {
-  height: 100%;
   position: relative;
   color: #fff;
   z-index: 10;
@@ -1165,7 +1164,7 @@ body.no-scroll {
 
 .lays__two {
   position: relative;
-  padding-top: 102%;
+  height: 46.064vw;
   transform: translateX(350px);
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
@@ -1211,11 +1210,9 @@ body.no-scroll {
   }
 
   .lays__one {
-    height: 100.1875%;
     transform: translateX(0px);
     position: relative;
-    padding-top: 100%;
-    /* 16:9 Aspect Ratio */
+    height: 100.1vw;
     background: url("../img/lays/mobile__red.png") no-repeat 50% 50%;
     background-size: cover;
     opacity: 1;
@@ -1284,7 +1281,7 @@ body.no-scroll {
   }
 
   .lays__two {
-    padding-top: 97.5%;
+    height: 100vw;
     opacity: 1;
     transform: translateX(0px);
   }
@@ -1293,8 +1290,6 @@ body.no-scroll {
     background: url("../img/lays/newmobile.jpg") no-repeat 50% 50%;
     background-size: cover;
     position: relative;
-    height: 100%;
-    width: 100%;
     transform: scale(1);
     right: 0rem;
     top: 0rem;
@@ -1306,36 +1301,31 @@ body.no-scroll {
   grid-template-columns: 1fr 1fr;
 }
 
-.map:hover .map__one .map__one-wrap .map__img {
+.map:hover .map__one .map__img {
   transition: transform 10s linear;
   transform: scale(1.2);
 }
 
 .map__one {
   position: relative;
-  height: 100%;
+  overflow: hidden;
   opacity: 0;
-  padding-top: 102%;
+  height: 46.064vw;
   transition: opacity 1s ease, transform 1s ease;
   transform: translateX(-350px);
 }
 
-.map__one-wrap {
+.map__img {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
   left: 0;
-}
-
-.map__img {
   background: url("../img/map/ppl.jpg") no-repeat 50% 50%;
   background-size: cover;
-  height: 100%;
-  width: 100%;
   transition: transform 10s linear;
 }
+
 
 .map__one__img {
   position: absolute;
@@ -1347,7 +1337,7 @@ body.no-scroll {
 
 .map__two {
   position: relative;
-  padding-top: 102%;
+  height: 46.064vw;
   background: url("../img/map/map.jpg") no-repeat 50% 50%;
   background-size: cover;
   transform: translateX(350px);
@@ -1411,14 +1401,13 @@ body.no-scroll {
     transform: scale(1);
   }
 
-  .map:hover .map__one .map__one-wrap .map__img {
+  .map:hover .map__one .map__img {
     transition: none;
     transform: scale(1);
   }
 
   .map__two {
-    width: 100%;
-    background-size: 100% 100%;
+    height: 100vw;
     border-top: 3px solid white;
     background: url("../img/map/mobile__map.png") no-repeat 50% 50%;
     background-size: cover;
@@ -1454,7 +1443,7 @@ body.no-scroll {
   }
 
   .map__one {
-    width: 100%;
+    height: 100vw;
     transform: scale(1.004);
     transform: translateX(0px);
     opacity: 1;
@@ -1492,9 +1481,7 @@ body.no-scroll {
 
 .footer__links {
   display: flex;
-  height: 100%;
-  float: right;
-  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .footer__links div.facebook {
