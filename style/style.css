@@ -611,8 +611,6 @@ body.no-scroll {
 }
 
 .intro {
-  width: 100%;
-  position: relative;
   height: 42vw;
   background: url("../img/intro/1.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -679,7 +677,6 @@ body.no-scroll {
 }
 
 .h1__text {
-  position: relative;
   font-family: GothamPro-Medium;
   color: #f73934;
   margin-left: 51px;
@@ -851,21 +848,12 @@ body.no-scroll {
 }
 
 .photos__one {
-  position: relative;
-  width: 100%;
   height: 46.99vw;
-  /* 16:9 Aspect Ratio */
   background: url("../img/block2/left_img.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
 
-.photos__one__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
+
 
 .photos__wrap {
   position: relative;
@@ -982,24 +970,16 @@ body.no-scroll {
 
 .photos__two {
   background-color: #fff;
-    position: relative;
   height: 46.99vw;
-}
-
-
-.photos__container {
-  position: absolute;
-  left: 0;
-  top: 0;
   padding: 10px;
-  width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-column-gap: 0.181rem;
-  grid-row-gap: 0.181rem;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
 }
+
+
 
 .photos__img {
   background-size: cover;
@@ -1063,10 +1043,6 @@ body.no-scroll {
     background-size: contain;
   }
 
-  .photos__container {
-    padding: 13px;
-    grid-gap: 3px;
-  }
 
   .photos__wrap .button:hover:before {
     opacity: 0;
@@ -1074,6 +1050,8 @@ body.no-scroll {
 
   .photos__two {
     height: 100vw;
+    padding: 13px;
+    grid-gap: 3px;
   }
 }
 
@@ -1100,7 +1078,6 @@ body.no-scroll {
 }
 
 .lays__one {
-  position: relative;
   color: #fff;
   z-index: 10;
   background-color: #ec0d00;
@@ -1163,19 +1140,10 @@ body.no-scroll {
 }
 
 .lays__two {
-  position: relative;
   height: 46.064vw;
   transform: translateX(350px);
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
-}
-
-.lays__two-wrap {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   overflow: hidden;
 }
 
@@ -1188,6 +1156,10 @@ body.no-scroll {
   transform: scale(1.1);
   right: 0.3rem;
   transition: transform 10s ease;
+}
+
+.lays__img {
+
 }
 
 @media (max-width: 680px) {
@@ -1211,7 +1183,6 @@ body.no-scroll {
 
   .lays__one {
     transform: translateX(0px);
-    position: relative;
     height: 100.1vw;
     background: url("../img/lays/mobile__red.png") no-repeat 50% 50%;
     background-size: cover;
@@ -1276,9 +1247,6 @@ body.no-scroll {
     opacity: 0;
   }
 
-  .lays__two-wrap {
-    overflow: hidden;
-  }
 
   .lays__two {
     height: 100vw;
@@ -1289,10 +1257,8 @@ body.no-scroll {
   .lays__img {
     background: url("../img/lays/newmobile.jpg") no-repeat 50% 50%;
     background-size: cover;
-    position: relative;
     transform: scale(1);
-    right: 0rem;
-    top: 0rem;
+    position: static;
   }
 }
 
@@ -1307,7 +1273,6 @@ body.no-scroll {
 }
 
 .map__one {
-  position: relative;
   overflow: hidden;
   opacity: 0;
   height: 46.064vw;
@@ -1345,15 +1310,9 @@ body.no-scroll {
   transition: opacity 1s ease, transform 1s ease;
 }
 
-.map__two-wrap {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
 
-.map__two-wrap:after {
+
+.map__two:after {
   content: "";
   position: absolute;
   background-image: url("../img/map/reversetriangle.png");
@@ -1376,7 +1335,7 @@ body.no-scroll {
   margin: 10.55rem auto 0;
 }
 
-.map__two-wrap .button {
+.map__two .button {
   margin: 0.9rem auto 0;
 }
 
@@ -1421,10 +1380,10 @@ body.no-scroll {
     left: 50%;
     margin: -1% 0 0 -31.5%;
     width: 62.5%;
-    font-size: 3.7rem;
+    font-size: 3.63rem;
   }
 
-  .map__two-wrap .button {
+  .map__two .button {
     position: relative;
     top: 65%;
     left: 50%;
@@ -1438,7 +1397,7 @@ body.no-scroll {
     background-color: rgba(168, 5, 0, 0.1);
   }
 
-  .map__two-wrap .button:hover:before {
+  .map__two .button:hover:before {
     opacity: 0;
   }
 
