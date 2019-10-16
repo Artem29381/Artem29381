@@ -765,9 +765,7 @@ body.no-scroll {
   .intro {
     background: url("../img/intro/mobile.jpg") no-repeat;
     margin-top: 80px;
-    padding-top: 174%;
-    height: 100%;
-    width: 100%;
+    height: 174vw;
     background-size: cover;
     transform: translateX(0px);
     transition: opacity 1.2s ease;

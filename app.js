@@ -16,8 +16,10 @@ const closeMenu = () => {
   headerMenu.nextElementSibling.nextElementSibling.classList.toggle('active');
   close.classList.toggle('active');
 }
-
-const heightHeader = header.offsetHeight / 1.1;
+let heightHeader = header.offsetHeight / 1.1;
+window.addEventListener('resize', () => {
+	heightHeader = header.offsetHeight / 1.1;
+});
 let value = window.pageYOffset;
 window.addEventListener('scroll', function () {
   if ((window.pageYOffset > value + 50) && (window.pageYOffset > heightHeader)) {
